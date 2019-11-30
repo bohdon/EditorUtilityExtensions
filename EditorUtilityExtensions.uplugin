@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "EditorUtilityExtensions",
+	"Description": "Extensions to the exposed editor utilities for use in blueprint and python",
+	"Category": "Other",
+	"CreatedBy": "Bohdon Sayre",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EditorUtilityExtensions",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
