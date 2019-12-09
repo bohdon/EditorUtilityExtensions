@@ -14,10 +14,10 @@ class EDITORUTILITYEXTENSIONS_API UEditorUtilityExtensionsLibrary : public UBlue
 
 public:
 	/** Return the folders that are selected in the primary content browser */
-	UFUNCTION(BlueprintCallable, Category = "Development|Editor")
+	UFUNCTION(BlueprintCallable, Category = "EditorExtensions|ContentBrowser")
 	static TArray<FString> GetSelectedFolders();
 
 	/** Return the folders that are selected in the path view */
-	UFUNCTION(BlueprintCallable, Category = "Development|Editor")
+	UFUNCTION(BlueprintCallable, Category = "EditorExtensions|ContentBrowser")
 	static TArray<FString> GetSelectedPathViewFolders();
 };

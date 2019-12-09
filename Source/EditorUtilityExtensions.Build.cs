@@ -11,6 +11,7 @@ public class EditorUtilityExtensions : ModuleRules
             {
                 "Core",
                 "SlateCore",
+                "UnrealEd",
 				// ... add other public dependencies that you statically link with here ...
 			}
         );
