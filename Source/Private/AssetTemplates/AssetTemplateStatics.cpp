@@ -3,6 +3,7 @@
 #include "AssetTemplates/AssetTemplateStatics.h"
 
 #include "EditorUtilityExtensionsLibrary.h"
+#include "EditorUtilityExtensionsSettings.h"
 #include "Internationalization/TextFormatter.h"
 
 
@@ -51,4 +52,14 @@ UObject* UAssetTemplateStatics::CreateAssetFromTemplate(const FAssetTemplate& Te
 	{
 		return UEditorUtilityExtensionsLibrary::CreateAsset(AssetName, PackagePath, Template.AssetClass, Template.FactoryClass, CallingContext);
 	}
+}
+
+UDataTable* UAssetTemplateStatics::GetDefaultAssetTemplateTable()
+{
+	const UEditorUtilityExtensionsSettings* Settings = UEditorUtilityExtensionsSettings::Get();
+	if (Settings->DefaultAssetTemplates.IsValid())
+	{
+		return Cast<UDataTable>(Settings->DefaultAssetTemplates.TryLoad());
+	}
+	return nullptr;
 }

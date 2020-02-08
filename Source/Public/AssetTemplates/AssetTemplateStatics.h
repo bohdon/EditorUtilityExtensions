@@ -37,4 +37,11 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable)
 	static UObject* CreateAssetFromTemplate(const FAssetTemplate& Template, TMap<FString, FString> Arguments);
+
+	/**
+	 * Return the default data table to use for asset templates.
+	 * Can be set in the project settings for this plugin.
+	 */
+	UFUNCTION(BlueprintCallable)
+	static UDataTable* GetDefaultAssetTemplateTable();
 };
