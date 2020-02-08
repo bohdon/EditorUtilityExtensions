@@ -2,6 +2,9 @@
 
 #include "EditorUtilityExtensionsModule.h"
 
+DEFINE_LOG_CATEGORY(LogEditorUtilityExtensions);
+
+
 #define LOCTEXT_NAMESPACE "FEditorUtilityExtensionsModule"
 
 void FEditorUtilityExtensionsModule::StartupModule()
