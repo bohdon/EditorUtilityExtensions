@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Bohdon Sayre
 
-#include "EditorUtilityExtensions.h"
+#include "EditorUtilityExtensionsModule.h"
 
 #define LOCTEXT_NAMESPACE "FEditorUtilityExtensionsModule"
 
