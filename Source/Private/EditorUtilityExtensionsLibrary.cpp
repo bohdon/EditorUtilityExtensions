@@ -29,6 +29,18 @@ TArray<FString> UEditorUtilityExtensionsLibrary::GetSelectedPathViewFolders()
 	return SelectedFolders;
 }
 
+void UEditorUtilityExtensionsLibrary::SyncBrowserToAssets(const TArray<UObject*>& AssetList, bool bAllowLockedBrowsers, bool bFocusContentBrowser, FName InstanceName, bool bNewSpawnBrowser)
+{
+	FContentBrowserModule& ContentBrowserModule = FModuleManager::LoadModuleChecked<FContentBrowserModule>("ContentBrowser");
+	ContentBrowserModule.Get().SyncBrowserToAssets(AssetList, bAllowLockedBrowsers, bFocusContentBrowser, InstanceName, bNewSpawnBrowser);
+}
+
+void UEditorUtilityExtensionsLibrary::SyncBrowserToFolders(const TArray<FString>& FolderList, bool bAllowLockedBrowsers, bool bFocusContentBrowser, FName InstanceName, bool bNewSpawnBrowser)
+{
+	FContentBrowserModule& ContentBrowserModule = FModuleManager::LoadModuleChecked<FContentBrowserModule>("ContentBrowser");
+	ContentBrowserModule.Get().SyncBrowserToFolders(FolderList, bAllowLockedBrowsers, bFocusContentBrowser, InstanceName, bNewSpawnBrowser);
+}
+
 UObject* UEditorUtilityExtensionsLibrary::CreateAsset(const FString& AssetName, const FString& PackagePath, UClass* AssetClass, UClass* FactoryClass, FName CallingContext /*= NAME_None*/)
 {
 	if (FactoryClass)
