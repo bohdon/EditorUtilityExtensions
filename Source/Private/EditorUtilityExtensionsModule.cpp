@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Bohdon Sayre
+// Copyright (c) 2020 Bohdon Sayre
 
 #include "EditorUtilityExtensionsModule.h"
 
