@@ -14,20 +14,6 @@ class EDITORUTILITYEXTENSIONS_API UEditorUtilityExtensionsLibrary : public UBlue
 	GENERATED_BODY()
 
 
-	// General Utils
-	// -------------
-public:
-	/**
-	 * Format a string using a dictionary of key and value strings
-	 *
-	 * @param Format The format string, using braces to indicate keys, e.g. "{MyKey}"
-	 * @param Values The values for each key in the format string
-	 * @return True if the format string was fully formatted, false if values were missing
-	 */
-	UFUNCTION(BlueprintCallable, Category = "EditorExtensions")
-	static bool FormatString(FString Format, const TMap<FString, FString>& Values, FString& Result);
-
-
 	// Content Browser
 	// ---------------
 public:

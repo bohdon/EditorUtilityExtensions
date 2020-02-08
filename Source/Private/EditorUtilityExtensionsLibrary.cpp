@@ -11,24 +11,6 @@
 #include "PackageTools.h"
 
 
-bool UEditorUtilityExtensionsLibrary::FormatString(FString Format, const TMap<FString, FString>& Values, FString& Result)
-{
-	// perform extremely basic case-insensitive search and replace of keys and values
-	Result = Format;
-	for (auto& Elem : Values)
-	{
-		FString SearchKey = FString::Printf(TEXT("{%s}"), *Elem.Key);
-		Result = Result.Replace(*SearchKey, *Elem.Value, ESearchCase::IgnoreCase);
-	}
-
-	if (Result.Contains(FString("{")) || Result.Contains(FString("}")))
-	{
-		return false;
-	}
-
-	return true;
-}
-
 TArray<FString> UEditorUtilityExtensionsLibrary::GetSelectedFolders()
 {
 	FContentBrowserModule& ContentBrowserModule = FModuleManager::LoadModuleChecked<FContentBrowserModule>("ContentBrowser");
